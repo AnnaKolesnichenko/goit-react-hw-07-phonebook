@@ -9,8 +9,6 @@ const Contacts = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(contactState);
   const filter = useSelector(filterState) || '';
-  console.log(contacts.filter(item => item.name !== filter))
-  console.log(filter)
 
   useEffect(() => {
     dispatch(fetchAllContacts());
