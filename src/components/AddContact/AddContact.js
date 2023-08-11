@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import css from './addContact.module.css';
-import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 import { contactState } from 'redux/selectors';
 import { addContact } from 'redux/thunks';
@@ -28,7 +27,6 @@ const AddContact = () => {
         const newContact = {
             name: name, 
             number: number,
-            id: nanoid(),
         };        
         const duplicateName = contacts.find(
             contact => contact.name.toLowerCase() === name.toLowerCase()

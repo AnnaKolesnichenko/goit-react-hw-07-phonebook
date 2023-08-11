@@ -31,7 +31,7 @@ const Contacts = () => {
             : filteredNames.map(contact => {
                 return (
                   <li className={css.list_item} key={contact.id}>
-                    {contact.name}: {contact.phone}
+                    {contact.name}: {contact.number}
                     <button
                       className={css.delete_btn}
                       onClick={() => dispatch(deleteContactById(contact.id))}
